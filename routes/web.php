@@ -1,0 +1,36 @@
+<?php
+
+use Illuminate\Support\Facades\Route;
+use Inertia\Inertia;
+
+Route::get('/', function () {
+    return Inertia::render('Home');
+})->name('home');
+
+// Dynamic service pages
+Route::get('/services/{slug}', function ($slug) {
+    return Inertia::render('Service', [
+        'slug' => $slug,
+    ]);
+})->name('services.show');
+
+// Course pages
+Route::get('/courses/{slug}', function ($slug) {
+    return Inertia::render('Course', [
+        'slug' => $slug,
+    ]);
+})->name('courses.show');
+
+// All courses page
+Route::get('/courses', function () {
+    return Inertia::render('AllCourses');
+})->name('courses.index');
+
+Route::middleware(['auth', 'verified'])->group(function () {
+    Route::get('dashboard', function () {
+        return Inertia::render('dashboard');
+    })->name('dashboard');
+});
+
+require __DIR__.'/settings.php';
+require __DIR__.'/auth.php';
