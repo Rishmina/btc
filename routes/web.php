@@ -7,13 +7,6 @@ Route::get('/', function () {
     return Inertia::render('Home');
 })->name('home');
 
-// Dynamic service pages
-Route::get('/services/{slug}', function ($slug) {
-    return Inertia::render('Service', [
-        'slug' => $slug,
-    ]);
-})->name('services.show');
-
 // Course pages
 Route::get('/courses/{slug}', function ($slug) {
     return Inertia::render('Course', [

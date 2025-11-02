@@ -166,6 +166,72 @@ export default function Course({ slug }: { slug: string }) {
             price: '$1,599',
             rating: 4.9,
         },
+        'writing-for-business-email-etiquette': {
+            id: 19,
+            slug: 'writing-for-business-email-etiquette',
+            title: 'Writing for Business & Email Etiquette',
+            description: 'Master professional business writing and email communication. Learn to write clear, concise, and impactful business communications.',
+            image: '/images/courses/email.jpg',
+            duration: '4 weeks',
+            level: 'Beginner',
+            price: '$899',
+            rating: 4.7,
+        },
+        'effective-planning-organizing-skills': {
+            id: 100,
+            slug: 'effective-planning-organizing-skills',
+            title: 'Effective Planning and Organizing Skills',
+            description: 'Learn to plan strategically, organize resources efficiently, and execute projects successfully to achieve business objectives.',
+            image: '/images/courses/managemnt.jpg',
+            duration: '4 weeks',
+            level: 'Intermediate',
+            price: '$1,099',
+            rating: 4.7,
+        },
+        'financial-awareness-non-financial-employees': {
+            id: 101,
+            slug: 'financial-awareness-non-financial-employees',
+            title: 'Financial Awareness for Non-Financial Employees',
+            description: 'Understand financial statements, budgets, and key financial metrics without a finance background. Make informed business decisions.',
+            image: '/images/courses/businessman-touching-tip-bar-chart.jpg',
+            duration: '4 weeks',
+            level: 'Beginner',
+            price: '$999',
+            rating: 4.7,
+        },
+        'analytical-skills': {
+            id: 48,
+            slug: 'analytical-skills',
+            title: 'Analytical Skills',
+            description: 'Develop critical thinking and analytical abilities to solve problems, make data-driven decisions, and improve business outcomes.',
+            image: '/images/courses/analytical.jpg',
+            duration: '4 weeks',
+            level: 'Intermediate',
+            price: '$899',
+            rating: 4.6,
+        },
+        'effective-communication-developing-interpersonal-skills': {
+            id: 45,
+            slug: 'effective-communication-developing-interpersonal-skills',
+            title: 'Effective Communication & Developing Interpersonal Skills',
+            description: 'Enhance your communication abilities and build strong interpersonal relationships. Master verbal, non-verbal, and written communication skills.',
+            image: '/images/courses/communication.jpg',
+            duration: '6 weeks',
+            level: 'All Levels',
+            price: '$1,199',
+            rating: 4.9,
+        },
+        'effective-communication-etiquette': {
+            id: 49,
+            slug: 'effective-communication-etiquette',
+            title: 'Effective Communication and Etiquette',
+            description: 'Master professional communication and business etiquette. Learn proper conduct, networking skills, and professional presence.',
+            image: '/images/courses/communication.jpg',
+            duration: '4 weeks',
+            level: 'All Levels',
+            price: '$949',
+            rating: 4.8,
+        },
     };
 
     const courseData = allCourses[slug as keyof typeof allCourses] || allCourses['leadership-courses'];
@@ -296,6 +362,38 @@ export default function Course({ slug }: { slug: string }) {
                 { week: 6, title: 'Leadership & Communication', topics: ['Project Leadership', 'Team Dynamics', 'Conflict Resolution', 'Stakeholder Engagement'] },
                 { week: 7, title: 'PMP Exam Preparation', topics: ['Exam Strategy', 'Practice Tests', 'Knowledge Areas Review', 'Test-taking Techniques'] },
                 { week: 8, title: 'Final Certification', topics: ['Final Assessment', 'PMP Application', 'Exam Preparation', 'Certification Achievement'] }
+            ],
+            'effective-planning-organizing-skills': [
+                { week: 1, title: 'Strategic Planning Foundations', topics: ['Planning Principles', 'Goal Setting Techniques', 'Vision & Mission Development', 'Strategic Thinking Frameworks'] },
+                { week: 2, title: 'Resource Organization', topics: ['Resource Allocation', 'Budget Planning', 'Time Management Systems', 'Resource Optimization'] },
+                { week: 3, title: 'Project Execution & Control', topics: ['Implementation Strategies', 'Progress Monitoring', 'Quality Control', 'Risk Management'] },
+                { week: 4, title: 'Advanced Planning Skills', topics: ['Contingency Planning', 'Performance Metrics', 'Continuous Improvement', 'Final Project & Certification'] }
+            ],
+            'financial-awareness-non-financial-employees': [
+                { week: 1, title: 'Financial Fundamentals', topics: ['Introduction to Financial Statements', 'Balance Sheet Basics', 'Income Statement Overview', 'Cash Flow Concepts'] },
+                { week: 2, title: 'Understanding Business Finances', topics: ['Revenue vs. Profit', 'Cost Analysis', 'Budget Management', 'Financial Planning Principles'] },
+                { week: 3, title: 'Key Financial Metrics', topics: ['Key Performance Indicators (KPIs)', 'Profitability Ratios', 'Financial Health Indicators', 'Making Data-Driven Decisions'] },
+                { week: 4, title: 'Financial Application', topics: ['Reading Annual Reports', 'Business Case Analysis', 'Financial Communication', 'Final Assessment & Certification'] }
+            ],
+            'analytical-skills': [
+                { week: 1, title: 'Critical Thinking Foundations', topics: ['Introduction to Analytical Thinking', 'Problem Identification & Definition', 'Data Collection Methods', 'Questioning Techniques'] },
+                { week: 2, title: 'Data Analysis & Interpretation', topics: ['Data Processing Techniques', 'Statistical Analysis Basics', 'Pattern Recognition', 'Drawing Valid Conclusions'] },
+                { week: 3, title: 'Decision-Making Frameworks', topics: ['Decision-Making Models', 'Risk Assessment', 'Scenario Analysis', 'Evaluating Alternatives'] },
+                { week: 4, title: 'Applying Analytical Skills', topics: ['Business Case Studies', 'Real-World Problem Solving', 'Presenting Analytical Findings', 'Final Assessment & Certification'] }
+            ],
+            'effective-communication-developing-interpersonal-skills': [
+                { week: 1, title: 'Communication Fundamentals', topics: ['Introduction to Effective Communication', 'Communication Styles & Preferences', 'Barriers to Communication', 'Active Listening Skills'] },
+                { week: 2, title: 'Verbal Communication', topics: ['Clarity & Conciseness', 'Tone & Voice Modulation', 'Presentation Skills', 'Persuasive Speaking'] },
+                { week: 3, title: 'Non-Verbal Communication', topics: ['Body Language', 'Facial Expressions', 'Eye Contact', 'Posture & Gestures'] },
+                { week: 4, title: 'Written Communication', topics: ['Professional Writing', 'Email Etiquette', 'Report Writing', 'Documentation Skills'] },
+                { week: 5, title: 'Interpersonal Relationships', topics: ['Building Rapport', 'Empathy & Understanding', 'Conflict Resolution', 'Cultural Sensitivity'] },
+                { week: 6, title: 'Advanced Communication Skills', topics: ['Difficult Conversations', 'Giving & Receiving Feedback', 'Negotiation Skills', 'Final Assessment & Certification'] }
+            ],
+            'effective-communication-etiquette': [
+                { week: 1, title: 'Professional Communication Basics', topics: ['Communication Fundamentals', 'Professional Tone & Language', 'Business Etiquette Principles', 'Cultural Awareness'] },
+                { week: 2, title: 'Business Etiquette', topics: ['Meeting Etiquette', 'Networking Skills', 'Professional Conduct', 'Dress Code & Appearance'] },
+                { week: 3, title: 'Written & Digital Communication', topics: ['Email Etiquette', 'Professional Correspondence', 'Social Media Presence', 'Digital Communication Best Practices'] },
+                { week: 4, title: 'Advanced Professional Skills', topics: ['Executive Presence', 'Networking Strategies', 'Professional Branding', 'Final Assessment & Certification'] }
             ]
         };
 
@@ -589,6 +687,86 @@ export default function Course({ slug }: { slug: string }) {
                     rating: 5,
                     comment: 'Outstanding project management training covering both traditional and agile methodologies. The leadership components were particularly strong.'
                 }
+            ],
+            'effective-planning-organizing-skills': [
+                {
+                    name: 'Ahmed Al-Mansoori',
+                    role: 'Operations Manager at Emirates Group',
+                    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop',
+                    rating: 5,
+                    comment: 'The planning and organizing skills course transformed how I approach strategic initiatives. The frameworks and tools provided have significantly improved my team\'s productivity and success rate.'
+                },
+                {
+                    name: 'Sarah Johnson',
+                    role: 'Department Manager at HSBC',
+                    image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop',
+                    rating: 5,
+                    comment: 'Excellent practical course on planning and organization. The resource optimization techniques and strategic planning methods have been game-changers for our department\'s performance.'
+                }
+            ],
+            'financial-awareness-non-financial-employees': [
+                {
+                    name: 'Mohammed Hassan',
+                    role: 'Marketing Director at ADNOC',
+                    image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop',
+                    rating: 5,
+                    comment: 'This course made financial statements and budgeting accessible without a finance background. I can now confidently contribute to budget discussions and understand our business\'s financial health.'
+                },
+                {
+                    name: 'Fatima Al-Zahra',
+                    role: 'HR Manager at Deloitte',
+                    image: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=150&h=150&fit=crop',
+                    rating: 5,
+                    comment: 'Excellent introduction to financial concepts for non-finance professionals. The real-world examples and practical exercises helped me understand financial metrics and make better business decisions.'
+                }
+            ],
+            'analytical-skills': [
+                {
+                    name: 'Ahmed Al-Mansoori',
+                    role: 'Business Analyst at Emirates Group',
+                    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop',
+                    rating: 5,
+                    comment: 'The analytical skills course transformed how I approach problems at work. The critical thinking frameworks and data analysis techniques have made me much more effective in my role.'
+                },
+                {
+                    name: 'Sarah Johnson',
+                    role: 'Operations Manager at HSBC',
+                    image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop',
+                    rating: 5,
+                    comment: 'Excellent course on developing analytical abilities. The decision-making frameworks and practical case studies helped me make better, data-driven decisions that improved our team\'s performance.'
+                }
+            ],
+            'effective-communication-developing-interpersonal-skills': [
+                {
+                    name: 'Ahmed Al-Mansoori',
+                    role: 'Sales Manager at Emirates Group',
+                    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop',
+                    rating: 5,
+                    comment: 'This course dramatically improved my communication skills both verbally and in writing. The interpersonal skills modules helped me build stronger relationships with clients and colleagues.'
+                },
+                {
+                    name: 'Fatima Al-Zahra',
+                    role: 'HR Business Partner at Deloitte',
+                    image: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=150&h=150&fit=crop',
+                    rating: 5,
+                    comment: 'Excellent comprehensive course on communication. The non-verbal communication and active listening sections were particularly valuable for my role in HR.'
+                }
+            ],
+            'effective-communication-etiquette': [
+                {
+                    name: 'Mohammed Hassan',
+                    role: 'Executive Assistant at ADNOC',
+                    image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop',
+                    rating: 5,
+                    comment: 'Perfect course for professional development. The business etiquette and networking skills have significantly enhanced my professional presence and opened new career opportunities.'
+                },
+                {
+                    name: 'Sarah Johnson',
+                    role: 'Marketing Director at HSBC',
+                    image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop',
+                    rating: 5,
+                    comment: 'The communication and etiquette course gave me the confidence and skills needed for executive-level interactions. The professional branding module was especially impactful.'
+                }
             ]
         };
 
@@ -625,7 +803,7 @@ export default function Course({ slug }: { slug: string }) {
                                     <img
                                         src={courseData.image}
                                         alt={courseData.title}
-                                        className="w-full h-[400px] object-cover"
+                                        className={`w-full h-[400px] object-cover ${courseData.image === '/images/courses/uae.jpg' ? 'object-top' : ''}`}
                                         onError={(e) => {
                                             e.currentTarget.src = 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop';
                                         }}
@@ -854,7 +1032,7 @@ export default function Course({ slug }: { slug: string }) {
                                             <img
                                                 src={course.image}
                                                 alt={course.title}
-                                                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                                                className={`w-full h-full object-cover ${course.image === '/images/courses/uae.jpg' ? 'object-top' : ''} group-hover:scale-110 transition-transform duration-300`}
                                                 onError={(e) => {
                                                     e.currentTarget.src = 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=300&fit=crop';
                                                 }}
